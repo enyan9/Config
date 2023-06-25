@@ -1,0 +1,136 @@
+{
+    "workbench.colorTheme": "Monokai",
+    //"workbench.activityBar.visible": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.sideBar.location": "left",
+    "workbench.colorCustomizations": {
+        
+        "[Solarized Light]": {
+            "editor.selectionBackground": "#dfb0ff36",
+        },
+        "[Visual Studio Dark]": {
+            "editor.selectionBackground": "#dfb0ff36",
+        },
+        "[Monokai]" : {
+            "editor.selectionBackground": "#dfb0ff36",
+            "gitDecoration.untrackedResourceForeground": "#ffffff66",            
+        },
+        "[GitHub Light Default]": {
+            "editor.selectionBackground": "#dfb0ff36",
+            "editor.background": "#FDF5E6", //Oldlace
+            "titleBar.activeBackground": "#FDF5E6",
+            "titleBar.inactiveBackground": "#FDF5E6",
+            "activityBar.background": "#FDF5E6",
+            "editor.lineHighlightBackground": "#FAEBD7" //AntiqueWhite
+        },
+        "[darkSeiba]" : { //Unconfirmed
+            "editor.background" : "#272822",
+            "editor.selectionBackground": "#9cb4a0",
+            "toolbar.hoverOutline": "#1c2122",
+            "toolbar.hoverBackground": "#becfd2",
+            "titleBar.activeBackground": "#62ffff",
+            "titleBar.activeForeground": "#fceed9",
+            "titleBar.inactiveBackground": "#e0dfde",
+            "titleBar.inactiveForeground": "#4b4743",
+            "list.focusBackground": "#e3dac9", //Bone,
+            "list.hoverBackground": "#65826e"
+        }
+    },
+    "vim.disableExtension": true,
+    "editor.fontSize": 13.5,
+    "editor.dragAndDrop": false,
+    "window.titleBarStyle": "custom",
+    "window.newWindowDimensions": "inherit",
+    "update.mode": "none",
+    "python.terminal.activateEnvironment": false,
+    "debug.openDebug": "neverOpen",
+    "debug.console.acceptSuggestionOnEnter": "on",
+    "debug.internalConsoleOptions" : "openOnSessionStart",
+    "debug.console.wordWrap" :true,
+    "debug.openExplorerOnEnd": false,
+
+    // "workbench.editorAssociations": {
+    //     "*.ipynb": "jupyter.notebook.ipynb"
+    // },
+
+    "editor.tokenColorCustomizations": {
+        "[Monokai]": {
+            "variables": "#fceed9", //"SeibaGold: #fceed9"
+            "textMateRules": [
+                {
+                    "scope": "string.quoted.double.json.comments",
+                    "settings": {
+                        "foreground": "#fceed9"
+                    }
+                },
+                {
+                    "scope": "source",
+                    "settings": {
+                        "foreground": "#fceed9"
+                    }
+                },
+                {
+                    "scope": "meta.paragraph.markdown",
+                    "settings": {
+                        "foreground": "#fceed9"
+                    }
+                }
+            ]
+        }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "[Monokai]": {
+            "enabled": true,
+            "rules": {
+                "module":{
+                    "underline": false
+                },
+                "class": {
+                    "underline": false
+                },
+                // "magicFunction:python": "#ee0000",
+                //"function.declaration:python": "#990000",
+
+                // "*.decorator:python": "#0000dd",
+                // "*.typeHint:python": "#5500aa",
+                // "*.typeHintComment:python": "#aaaaaa"
+            },
+        },
+        "[Solarized Light]": {
+            "enabled": true,
+            "rules": {
+                "variable": "#333333"
+            }
+        }
+    },
+    "remote.SSH.remotePlatform": {
+        "babylon": "linux"
+    },
+    "window.restoreWindows": "none",
+    "terminal.integrated.profiles.linux" :{
+        "bash": {
+            "path": "bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        // "fish": {
+        //     "path": "fish"
+        // },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        // "pwsh": {
+        //     "path": "pwsh",
+        //     "icon": "terminal-powershell"
+        // }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    //"terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "terminal.integrated.tabs.enabled": true,
+    "git.ignoreMissingGitWarning": true,
+    "notebook.lineNumbers": "on",
+    "docker.dockerPath": "docker",
+    "workbench.activityBar.visible": false
+}

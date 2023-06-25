@@ -1,0 +1,104 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+c",
+        "command": "workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "alt+a",
+        "command": "workbench.action.debug.stepOver",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "alt+d",
+        "command": "workbench.action.debug.stepOut",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "alt+g",
+        "command": "workbench.action.debug.disconnect",
+        "when": "focusedSessionIsAttach && inDebugMode"
+    },
+    {
+        "key": "alt+g",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode && !focusedSessionIsAttach"
+    },
+    {
+        "key": "f5",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.debug.action.toggleRepl"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "repl.action.acceptInput",
+        "when": "inDebugRepl && textInputFocus"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "toggleVim"
+    },
+    {
+        "key": "alt+`",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+alt+enter",
+        "command": "python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+shift+alt+d",
+        "command": "workbench.view.extension.test"
+    },
+    {
+        "key": "alt+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+alt+f12",
+        "command": "editor.action.inspectTMScopes"
+    },
+    {
+        "key": "ctrl+alt+f9",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "alt+v",
+        "command": "workbench.action.toggleEditorWidths"
+    },
+    {
+        "key": "alt+e",
+        "command": "editor.debug.action.conditionalBreakpoint"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    }
+]
