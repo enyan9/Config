@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# sudo usermod -G vboxsf -a $USER
+read -p "Enter github username: " git_name
 
+# sudo usermod -G vboxsf -a $USER
 sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install -y fedora-workstation-repositories
@@ -11,6 +12,22 @@ sudo dnf install -y \
 
 # https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/infrastructure-services/OpenSSH/
 # sudo systemctl enable sshd.service
+
+#sudo usermod -G vboxsf -a $USER
+
+cp -r --backup=simple linux/FedoraSpin/38/kde/Arc/. "$HOME"
+cp -r --backup=simple linux/FedoraSpin/38/kde/SeibaMorgan/. "$HOME"
+cp -r --backup=simple linux/dotfiles/. "$HOME"
+cp -r --backup=simple linux/FedoraSpin/38/kde/Konsole/. "$HOME"
+
+chsh -s $(which zsh)
+
+git config --global core.excludesfile ~/.gitignore
+git config --global user.name "$git_name" && git config --global user.email "noreply@github.com"
+
+sudo dnf install -y yakuake kate
+
+cp -r --backup=simple linux/FedoraSpin/38/kde/Yakuake/. "$HOME"
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -P "$HOME" \
     && chmod 755 "$HOME"/Miniconda3-latest-Linux-x86_64.sh \

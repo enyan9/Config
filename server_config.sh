@@ -1,0 +1,55 @@
+#!/bin/bash
+
+sudo systemctl enable sshd.service
+
+
+#SCIPRT IN TESTING
+
+read -p "Enter service account username: " service_name
+
+sudo cp ~/proj/Config/linux/zsh/.zshrc /home/"$service_name"/ \
+ && sudo useradd -m -s /usr/bin/zsh "$service_name" \
+ && sudo passwd "$service_name"
+
+read -p "Enter guest account username: " guest_name
+
+sudo cp ~/proj/Config/linux/zsh/.zshrc /home/"$guest_name"/ \
+ && sudo useradd -m -s /usr/bin/zsh "$guest_name" \
+ && sudo passwd "$guest_name"
+
+
+## Samba server config
+
+mkdir -p ~/sambashare && sudo tee -a /etc/samba/smb.conf > /dev/null << EOF
+[sambashare]
+        comment = Samba on localhost
+        path = /home/$service_name/sambashare
+        read only = no
+        browsable = yes
+EOF
+
+sudo systemctl enable smb nmb
+## NFS server config
+
+lsblk --fs
+
+read -p "Enter drive UUID: " uuid
+
+#ak
+read -p "Enter NFS server name to configure for this drive: " nfs_name
+
+sudo mkdir -p /srv/nfs/"$nfs_name" \
+    && sudo chown nobody: /srv/nfs \
+    && echo "UUID=$uuid  /mnt/$nfs_name     btrfs   defaults 0 2" | sudo tee -a /etc/fstab \
+    && echo /mnt/"$nfs_name" /srv/nfs/"$nfs_name" none defaults,bind 0 0 | sudo tee -a /etc/fstab \
+    && sudo mkdir -p /mnt/"$nfs_name" && sudo mount -a
+
+sudo tee -a /etc/exports > /dev/null << EOF
+/srv/nfs        192.168.0.0/24(rw,sync,no_subtree_check,fsid=0)
+/srv/nfs/$nfs_name 192.168.0.0/24(rw,sync,nohide,no_subtree_check)
+/srv/nfs/$nfs_name 127.0.0.1(rw,sync,nohide,no_subtree_check)
+EOF
+
+sudo exportfs -rav && sudo systemctl --now enable nfs-server
+
+showmount -e localhost
