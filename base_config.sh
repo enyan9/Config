@@ -6,4 +6,4 @@ sudo dnf config-manager --set-enabled google-chrome && sudo dnf install -y googl
 
 sudo dnf install -y \
     podman qemu fuse-overlayfs \
-    x2goserver x2goclient
+    nfs-utils 

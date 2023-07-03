@@ -2,6 +2,9 @@
 
 #SCIPRT IN TESTING
 
+# https://docs.saltproject.io/en/3004/topics/installation/fedora.html
+# sudo dnf install -y salt-minion
+
 sudo systemctl --now enable sshd.service
 
 read -p "Enter service account username: " service_name
@@ -70,3 +73,8 @@ EOF
 sudo exportfs -rav && sudo systemctl --now enable nfs-server
 
 showmount -e localhost
+
+######
+# 
+sudo dnf install - y \
+    postgresql-server postgresql-contrib
