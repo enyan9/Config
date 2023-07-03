@@ -15,8 +15,8 @@ newgrp vboxusers #or relog/restart
 ### Office productivity
 sudo dnf install -y \
     hplip ifuse gimp gimp-heif-plugin \
-    livecd-tools
-    #x2goserver-xsession x2goclient calibre
+    livecd-tools # calibre
+    #x2goserver x2goclient # x2goserver-xsession 
 
 wget https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64 -P "$HOME"/app
 
