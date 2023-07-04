@@ -35,4 +35,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.obsproject.Studio
+# flatpak install flathub com.discordapp.Discord/x86_64/stable
+
 # flatpak run com.obsproject.Studio
