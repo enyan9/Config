@@ -1,7 +1,5 @@
 #!/bin/bash
 
-./fedora.sh
-
 sudo dnf config-manager --set-enabled google-chrome && sudo dnf install -y google-chrome-stable
 
 ### Additional packages for bare-metal nodes

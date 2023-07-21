@@ -20,8 +20,9 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
 
 ### Office productivity
 sudo dnf install -y \
-    hplip ifuse gimp gimp-heif-plugin \
-    livecd-tools # calibre
+    hplip ifuse gimp \
+    livecd-tools \
+    #gimp-heif-plugin calibre
     #x2goserver x2goclient # x2goserver-xsession 
 
 
