@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #sudo hostnamectl set-hostname 'localhost-XYZ'
+#sudo btrfs filesystem label / 'localhost-XYZ'
 
 ### GUIs and other clients
 sudo dnf install -y \
