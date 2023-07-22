@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#sudo hostnamectl set-hostname 'localhost-XYZ'
+
 ### GUIs and other clients
 sudo dnf install -y \
     flatpak age vlc VirtualBox remmina yakuake firefox thunderbird wireshark \
@@ -11,7 +13,8 @@ newgrp vboxusers #or relog/restart
 #VBoxManage list vms
 #https://download.virtualbox.org/virtualbox/7.0.4/VBoxGuestAdditions_7.0.4.iso
 
-wget 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64' -P "$HOME"/app
+wget 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64' \
+    -O "$HOME"/app/Zotero-latest_linux-x86_64.tar.bz2
 
 sudo dnf config-manager --set-enabled google-chrome && sudo dnf install -y google-chrome-stable
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
