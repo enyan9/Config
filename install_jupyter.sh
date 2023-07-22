@@ -35,7 +35,8 @@ HOM=${1:-"$HOME"}
 #---
 
 #linux
-#conda install jupyter jupyterlab nodejs qtconsole requests lxml numpy scipy matplotlib pandas scikit-learn scikit-image shapely opencv h5py nb_conda
+#conda install python=3.11 jupyter jupyterlab nodejs qtconsole requests lxml numpy scipy matplotlib pandas scikit-learn scikit-image shapely opencv h5py nb_conda
+#pip install numpy-financial geopandas av
 
 #base ml
 #conda install jupyterlab nodejs requests lxml numpy scipy matplotlib pandas scikit-learn h5py nb_conda
