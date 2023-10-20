@@ -12,7 +12,7 @@ sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-non
 sudo dnf install -y fedora-workstation-repositories
 
 sudo dnf install -y \
-    which wget zsh tmux vim git git-lfs ranger jq openssh nfs-utils procps btop sshfs zip rsync
+    which wget zsh tmux vim git git-lfs ranger jq openssh nfs-utils procps btop sshfs zip rsync rclone
 
 # https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/infrastructure-services/OpenSSH/
 # sudo systemctl enable sshd.service

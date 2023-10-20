@@ -18,7 +18,7 @@ for name in "${names[@]}"; do
     #rsync -av --progress app/firefox/.mozilla/firefox/ "${HOME}/.mozilla/firefox/"
 
     #widget.non-native-theme.gtk.scrollbar.round-thumb false
-    #widget.non-native-theme.scrollbar.size.override 30
+    #widget.non-native-theme.scrollbar.size.override 35
 
     mkdir -p ~/app/firefox/firefox-"$name" \
         && tar xjf ~/app/firefox/firefox.tar.bz2 -C ~/app/firefox/firefox-"$name" --strip-components=1

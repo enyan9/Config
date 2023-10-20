@@ -35,11 +35,16 @@ HOM=${1:-"$HOME"}
 #---
 
 #linux
-#conda install python=3.11 jupyter jupyterlab nodejs qtconsole requests lxml numpy scipy matplotlib pandas scikit-learn scikit-image shapely opencv h5py nb_conda
+#conda install python=3.11 jupyter jupyterlab nodejs qtconsole requests lxml numpy scipy matplotlib pandas scikit-learn scikit-image shapely opencv h5py nb_conda spyder
 #pip install numpy-financial geopandas av
 
 #base ml
-#conda install jupyterlab nodejs requests lxml numpy scipy matplotlib pandas scikit-learn h5py nb_conda
+#conda install jupyterlab nodejs requests lxml numpy scipy matplotlib pandas scikit-learn h5py
+
+#gpu ml
+#conda create -n ml -c conda-forge -c pytorch -c nvidia python=3.11 jupyter scipy numpy matplotlib pandas geopandas scikit-learn scikit-image shapely jupyterlab h5py lxml nodejs gdb pytorch torchvision torchaudio pytorch-cuda=11.7
+#pip install numpy-financial av lightning onnxruntime tensorboard graphviz
+
 
 #jup
 
