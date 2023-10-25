@@ -31,6 +31,8 @@ sudo dnf install -y yakuake kate
 
 cp -r --backup=simple linux/FedoraSpin/38/kde/Yakuake/. "$HOME"
 
+# sudo fwupdmgr get-devices
+
 ## Miniconda
 
 read -p 'Install miniconda? (yes/Y) ' miniconda_install
