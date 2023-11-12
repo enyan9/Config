@@ -31,7 +31,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
 sudo dnf install -y \
     hplip ifuse gimp \
     livecd-tools
-    #gimp-heif-plugin calibre
+    #gimp-heif-plugin calibre # heif-pixbuf-loader
     #x2goserver x2goclient # x2goserver-xsession 
 
 

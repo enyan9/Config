@@ -5,6 +5,7 @@
 # https://docs.saltproject.io/en/3004/topics/installation/fedora.html
 # sudo dnf install -y salt-minion
 
+# cp /etc/ssh/ssh_host*
 sudo systemctl --now enable sshd.service
 
 read -p "Enter service account username: " service_name
