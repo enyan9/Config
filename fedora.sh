@@ -16,6 +16,7 @@ sudo dnf install -y \
 
 # https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/infrastructure-services/OpenSSH/
 # sudo systemctl --now enable sshd.service
+# sudo cp -r --backup /etc/ssh/. /run/media/$USER/$volume/root/etc/ssh/
 
 cp -r --backup=simple linux/FedoraSpin/38/kde/Arc/. "$HOME"
 cp -r --backup=simple linux/FedoraSpin/38/kde/SeibaMorgan/. "$HOME"
