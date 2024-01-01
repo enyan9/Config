@@ -4,7 +4,8 @@
 sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 ## CUDA libs for ffmpeg: xorg-x11-drv-nvidia-cuda-libs
 
-modinfo -F version nvidia
+# nvidia-smi
+# modinfo -F version nvidia
 
 ## https://rpmfusion.org/Howto/NVIDIA#Suspend
 

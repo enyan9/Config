@@ -12,16 +12,9 @@ sudo dnf install -y \
     flatpak age vlc VirtualBox remmina yakuake firefox thunderbird wireshark \
     postgresql kate lm_sensors
     
-sudo usermod -G vboxusers -a "$USER"
-newgrp vboxusers #or relog/restart 
-#VirtualBox    
-#VBoxManage list vms
-#https://download.virtualbox.org/virtualbox/7.0.4/VBoxGuestAdditions_7.0.4.iso
-
 # #https://docs.fedoraproject.org/en-US/quick-docs/virtualization-getting-started/
 # sudo dnf group install --with-optional virtualization
 # sudo systemctl enable --now libvirtd
-
 
 wget 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64' \
     -O "$HOME"/app/Zotero-latest_linux-x86_64.tar.bz2
@@ -57,3 +50,10 @@ flatpak install flathub com.obsproject.Studio
 # install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 # flatpak run com.obsproject.Studio
+
+#Apparently these will cause the script to exit, so they need to be at the end?
+sudo usermod -G vboxusers -a "$USER"
+newgrp vboxusers #or relog/restart 
+#VirtualBox    
+#VBoxManage list vms
+#https://download.virtualbox.org/virtualbox/7.0.4/VBoxGuestAdditions_7.0.4.iso

@@ -37,7 +37,7 @@ sudo mkdir -p /home/"$service_name"/sambashare && sudo tee -a /etc/samba/smb.con
 EOF
 
 sudo smbpasswd -a "$service_name"
-sudo semanage fcontext --add --type "samba_share_t" "/home/$service_name/sambashare(/.*)?"                                          [~][everdistant@Faker]
+sudo semanage fcontext --add --type "samba_share_t" "/home/$service_name/sambashare(/.*)?"
 sudo restorecon -R /home/"$service_name"/sambashare 
 
 # may or may not need "nmb" as well, depending on backwards compatibility
