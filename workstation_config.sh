@@ -18,6 +18,11 @@ newgrp vboxusers #or relog/restart
 #VBoxManage list vms
 #https://download.virtualbox.org/virtualbox/7.0.4/VBoxGuestAdditions_7.0.4.iso
 
+# #https://docs.fedoraproject.org/en-US/quick-docs/virtualization-getting-started/
+# sudo dnf group install --with-optional virtualization
+# sudo systemctl enable --now libvirtd
+
+
 wget 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64' \
     -O "$HOME"/app/Zotero-latest_linux-x86_64.tar.bz2
 
@@ -27,12 +32,15 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
     && sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode \
     && sudo dnf install -y microsoft-edge-stable
 
+# wget https://downloads.vivaldi.com/stable/vivaldi-stable-6.4.3160.42-1.x86_64.rpm && sudo dnf --nogpgcheck -y install ./vivaldi*.rpm
+
 ### Office productivity
 sudo dnf install -y \
     hplip ifuse gimp \
     livecd-tools
-    #gimp-heif-plugin calibre # heif-pixbuf-loader
-    #x2goserver x2goclient # x2goserver-xsession 
+
+# gimp-heif-plugin calibre # heif-pixbuf-loader #libheif-freeworld 
+# x2goserver x2goclient # x2goserver-xsession 
 
 
 ### Heavy-duty productivity
