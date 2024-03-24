@@ -30,7 +30,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
 ### Office productivity
 sudo dnf install -y \
     hplip ifuse gimp \
-    livecd-tools
+    livecd-tools libheif-freeworld
 
 # gimp-heif-plugin calibre # heif-pixbuf-loader #libheif-freeworld 
 # x2goserver x2goclient # x2goserver-xsession 
