@@ -43,8 +43,11 @@ HOM=${1:-"$HOME"}
 
 #gpu ml
 #conda create -n ml -c conda-forge -c pytorch -c nvidia python=3.11 jupyter scipy numpy matplotlib pandas geopandas scikit-learn scikit-image shapely jupyterlab h5py lxml nodejs gdb pytorch torchvision torchaudio pytorch-cuda=11.7
-#pip install numpy-financial av lightning onnxruntime tensorboard graphviz
+#pip install numpy-financial av lightning onnxruntime tensorboard graphviz transformers datasets
 
+#cpu ml
+#conda create -n ml -c conda-forge -c pytorch python=3.11 jupyter scipy numpy matplotlib pandas geopandas scikit-learn scikit-image shapely jupyterlab h5py lxml nodejs gdb pytorch torchvision torchaudio cpuonly
+#pip install numpy-financial av lightning onnxruntime tensorboard graphviz transformers datasets
 
 #jup
 

@@ -12,14 +12,14 @@ read -p "Enter service account username: " service_name
 
 sudo useradd -m -s /usr/bin/zsh "$service_name" \
     && sudo cp -r --backup=simple linux/dotfiles/. /home/"$service_name"/ \
-    && sudo chown -R "$service_name":"$service_name" /home/"$service_name"
+    && sudo chown -R "$service_name":"$service_name" /home/"$service_name" \
     && sudo passwd "$service_name"
 
 read -p "Enter guest account username: " guest_name
 
 sudo useradd -m -s /usr/bin/zsh "$guest_name" \
     && sudo cp -r --backup=simple linux/dotfiles/. /home/"$guest_name"/ \
-    && sudo chown -R "$guest_name":"$guest_name" /home/"$guest_name"
+    && sudo chown -R "$guest_name":"$guest_name" /home/"$guest_name" \
     && sudo passwd "$guest_name"
 
 #########################
@@ -77,5 +77,5 @@ showmount -e localhost
 
 ######
 # 
-sudo dnf install - y \
+sudo dnf install -y \
     postgresql-server postgresql-contrib
