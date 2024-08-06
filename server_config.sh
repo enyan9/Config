@@ -27,7 +27,9 @@ sudo useradd -m -s /usr/bin/zsh "$guest_name" \
 ## https://docs.fedoraproject.org/en-US/quick-docs/samba/
 
 sudo dnf install -y samba
-sudo mkdir -p /home/"$service_name"/sambashare && sudo tee -a /etc/samba/smb.conf > /dev/null << EOF
+sudo mkdir -p /home/"$service_name"/sambashare \
+    && sudo chown -R "$service_name":"$service_name" /home/"$service_name"/sambashare \
+    && sudo tee -a /etc/samba/smb.conf > /dev/null << EOF 
 
 [sambashare]
         comment = Samba on localhost
