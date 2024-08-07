@@ -73,6 +73,10 @@ sudo tee -a /etc/exports > /dev/null << EOF
 /srv/nfs/$nfs_name 127.0.0.1(rw,sync,nohide,no_subtree_check)
 EOF
 
+#--add-service=mountd
+sudo firewall-cmd --permanent --add-service=nfs --add-service=rpc-bind --zone=FedoraWorkstation && sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+
 sudo exportfs -rav && sudo systemctl --now enable nfs-server
 
 showmount -e localhost
