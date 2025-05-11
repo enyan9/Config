@@ -50,6 +50,7 @@ sudo firewall-cmd --permanent --add-service=samba --zone=FedoraWorkstation && su
 sudo firewall-cmd --list-all
 
 # dolphin smb://HOSTNAME
+# windows \\HOSTNAME\sambashare
 
 #########################
 ## NFS server config
@@ -58,7 +59,9 @@ lsblk --fs
 
 read -p "Enter drive UUID: " uuid
 
-### ak
+# windows  \\192.168.0.X\srv\nfs\ak
+# 192.168.0.X hostname  # C:\Windows\System32\drivers\etc\hosts
+
 read -p "Enter NFS server name to configure for this drive: " nfs_name
 
 sudo mkdir -p /srv/nfs/"$nfs_name" \

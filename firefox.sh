@@ -17,6 +17,10 @@ for name in "${names[@]}"; do
     firefox --CreateProfile "$name $HOME/.mozilla/firefox/emet.${name}"
     #rsync -av --progress app/firefox/.mozilla/firefox/ "${HOME}/.mozilla/firefox/"
 
+    # macOS
+    #mousewheel.min_line_scroll_amount 65
+    
+    # KDE
     #widget.non-native-theme.gtk.scrollbar.round-thumb false
     #widget.non-native-theme.scrollbar.size.override 35
 

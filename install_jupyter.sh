@@ -57,3 +57,14 @@ cp app/jupyter/.condarc "$HOM"/.condarc
 cp app/jupyter/jupyter_qtconsole_config.py "$HOM"/.jupyter/
 cp app/jupyter/jupyter_lab_config.py "$HOM"/.jupyter/
 cp app/jupyter/ipython_config.py "$HOM"/.ipython/profile_default/
+
+# ``` https://bbs.archlinux.org/viewtopic.php?pid=2089561#p2089561
+
+# QT_QPA_PLATFORM=xcb 
+
+# Proprietary apps usually don't use system Qt but instead ship their own copy of Qt, and often don't include the wayland plugin.
+# You simply can't run these applications on wayland; you just have to use xwayland.
+# You can try to bug vendors to include wayland support, but likely with limited success.
+# ```
+
+#vim ~/.config/spyder-py3/config/transient.ini
