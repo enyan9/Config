@@ -7,8 +7,8 @@ read -p "Enter github username: " git_name
 # sudo usermod -G vboxsf -a $USER
 # For VM testing see: https://askubuntu.com/questions/198452/no-host-only-adapter-selected
 
-sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+#sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install -y fedora-workstation-repositories
 
 sudo dnf install -y \
@@ -25,6 +25,7 @@ cp -r --backup=simple linux/FedoraSpin/38/kde/Konsole/. "$HOME"
 
 chsh -s $(which zsh)
 
+# eval "$(ssh-agent -s)" && ssh-add ~/.ssh/<keyfile>
 git config --global core.excludesfile ~/.gitignore
 git config --global user.name "$git_name" && git config --global user.email "noreply@github.com"
 

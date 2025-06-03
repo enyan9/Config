@@ -6,4 +6,4 @@ sudo dnf install -y \
     podman qemu fuse-overlayfs \
     nfs-utils
 
-sudo dnf config-manager --set-enabled google-chrome && sudo dnf install -y google-chrome-stable
+sudo dnf config-manager setopt google-chrome.enabled=1 && sudo dnf install -y google-chrome-stable
