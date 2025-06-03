@@ -19,11 +19,11 @@ sudo dnf install -y \
 wget 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64' \
     -O "$HOME"/app/Zotero-latest_linux-x86_64.tar.bz2
 
-sudo dnf-3 config-manager --set-enabled google-chrome && sudo dnf-3 install -y google-chrome-stable
+sudo dnf config-manager --set-enabled google-chrome && sudo dnf install -y google-chrome-stable
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc \
-    && sudo dnf-3 config-manager --add-repo https://packages.microsoft.com/yumrepos/edge \
-    && sudo dnf-3 config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode \
-    && sudo dnf-3 install -y microsoft-edge-stable code
+    && sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge \
+    && sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode \
+    && sudo dnf install -y microsoft-edge-stable code
 
 # wget https://downloads.vivaldi.com/stable/vivaldi-stable-6.4.3160.42-1.x86_64.rpm && sudo dnf --nogpgcheck -y install ./vivaldi*.rpm
 
