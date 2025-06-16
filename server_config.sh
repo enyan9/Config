@@ -38,13 +38,13 @@ sudo mkdir -p /home/"$service_name"/sambashare \
         browsable = yes
 EOF
 
-sudo smbpasswd -a "$service_name"
+echo "Enter SMB password for $service_name" && sudo smbpasswd -a "$service_name"
 sudo semanage fcontext --add --type "samba_share_t" "/home/$service_name/sambashare(/.*)?"
 sudo restorecon -R /home/"$service_name"/sambashare 
 
 # may or may not need "nmb" as well, depending on backwards compatibility
 sudo systemctl --now enable smb 
-smbclient -L //localhost
+smbclient -L //localhost --password=''
 
 sudo firewall-cmd --permanent --add-service=samba --zone=FedoraWorkstation && sudo firewall-cmd --reload
 sudo firewall-cmd --list-all
