@@ -7,8 +7,8 @@ read -p "Enter github username: " git_name
 # sudo usermod -G vboxsf -a $USER
 # For VM testing see: https://askubuntu.com/questions/198452/no-host-only-adapter-selected
 
-sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf config-manager setopt rpmfusion-free.enabled=0 rpmfusion-free-updates.enabled=0
-sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf config-manager setopt rpmfusion-nonfree.enabled=0 rpmfusion-nonfree-updates.enabled=0
+#sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf config-manager setopt rpmfusion-free.enabled=0 rpmfusion-free-updates.enabled=0
+#sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && sudo dnf config-manager setopt rpmfusion-nonfree.enabled=0 rpmfusion-nonfree-updates.enabled=0
 sudo dnf install -y fedora-workstation-repositories
 
 sudo dnf install -y \
